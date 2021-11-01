@@ -41,25 +41,15 @@ This is a Telegram Bot written in Python for mirroring files on the Internet to 
 - Multiple Trackers support
 - Shell and Executor
 - Sudo with or without Database
-- Custom Filename (Only for direct links, Telegram files and Youtube-dl. Not for Mega links, Gdrive links or Torrents)
+- Custom Filename* (Only for direct links, Telegram files and Youtube-dl. Not for Mega links, Gdrive links or Torrents)
 - Extract or Compress password protected files.
 - Extract these filetypes and uploads to Google Drive
-```
-ZIP, RAR, TAR, 7z, ISO, WIM, CAB, GZIP, BZIP2, 
-APM, ARJ, CHM, CPIO, CramFS, DEB, DMG, FAT, 
-HFS, LZH, LZMA, LZMA2, MBR, MSI, MSLZ, NSIS, 
-NTFS, RPM, SquashFS, UDF, VHD, XAR, Z, tar.xz
-```
+> ZIP, RAR, TAR, 7z, ISO, WIM, CAB, GZIP, BZIP2, APM, ARJ, CHM, CPIO, CramFS, DEB, DMG, FAT, HFS, LZH, LZMA, LZMA2, MBR, MSI, MSLZ, NSIS, NTFS, RPM, SquashFS, UDF, VHD, XAR, Z, tar.xz
+
 - Direct links Supported:
-```
-letsupload.io, hxfile.co, anonfiles.com, bayfiles.com, antfiles,
-fembed.com, fembed.net, femax20.com, layarkacaxxi.icu, fcdn.stream,
-sbplay.org, naniplay.com, naniplay.nanime.in, naniplay.nanime.biz, sbembed.com,
-streamtape.com, streamsb.net, feurl.com, pixeldrain.com, racaty.net,
-1fichier.com, 1drv.ms (Only works for file not folder or business account),
-uptobox.com (Uptobox account must be premium), solidfiles.com
-```
-***See these examples for custom filename, Extract/Compress password protected files and download from protected links*
+>letsupload.io, hxfile.co, anonfiles.com, bayfiles.com, antfiles, fembed.com, fembed.net, femax20.com, layarkacaxxi.icu, fcdn.stream, sbplay.org, naniplay.com, naniplay.nanime.in, naniplay.nanime.biz, sbembed.com, streamtape.com, streamsb.net, feurl.com, pixeldrain.com, racaty.net, 1fichier.com, 1drv.ms (Only works for file not folder or business account), uptobox.com (Uptobox account must be premium), solidfiles.com
+
+**See these examples for custom filename, Extract/Compress password protected files and download from protected links*
 <p><a href="https://telegra.ph/Magneto-Python-Aria---Custom-Filename-Examples-01-20"> <img src="https://img.shields.io/badge/See%20Telegraph-grey?style=for-the-badge&logo=telegraph" width="170""/></a></p>
 
 # How to deploy?
@@ -114,12 +104,12 @@ pip3 install -r requirements-cli.txt
 ```
 cp config_sample.env config.env
 ```
-Remove the first line saying:
+- Remove the first line saying:
 ```
 _____REMOVE_THIS_LINE_____=True
 ```
 Fill up rest of the fields. Meaning of each field is discussed below:
-- Required Field
+1. Required Field
 <details>
     <summary><b>Click Here For More Details</b></summary>
 - `BOT_TOKEN`: The Telegram Bot Token that you got from [@BotFather](https://t.me/BotFather)
@@ -132,7 +122,7 @@ Fill up rest of the fields. Meaning of each field is discussed below:
 - `AUTO_DELETE_MESSAGE_DURATION`: Interval of time (in seconds), after which the bot deletes it's message (and command message) which is expected to be viewed instantly. (**NOTE**: Set to `-1` to never automatically delete messages)
 - `BASE_URL_OF_BOT`: (Required for Heroku to avoid sleep/idling) Valid BASE URL of app where the bot is deployed. Format of URL should be `http://myip` (where `myip` is the IP/Domain of your bot) or if you have chosen other port than `80` then fill in this format `http://myip:port`, for Heroku fill `https://yourappname.herokuapp.com` (**NOTE**: Do not put slash at the end), still got idling? You can use http://cron-job.org to ping your Heroku app.
 </details>
-- Optional Field
+2. Optional Field
 <details>
     <summary><b>Click Here For More Details</b></summary>
 - `ACCOUNTS_ZIP_URL`: Only if you want to load your Service Account externally from an Index Link. Archive the accounts folder to a zip file. Fill this with the direct link of that file.

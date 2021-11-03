@@ -111,6 +111,7 @@ pip3 install -r requirements-cli.txt
 <p><a href="https://dev.to/prisma/how-to-setup-a-free-postgresql-database-on-heroku-1dc1"> <img src="https://img.shields.io/badge/See%20Dev.to-black?style=for-the-badge&logo=dev.to" width="160""/></a></p>
 
 </details>
+    
 ------
 
 ### Setting up config file

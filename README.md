@@ -112,6 +112,7 @@ pip3 install -r requirements-cli.txt
 
 </details>
 ------
+
 ### Setting up config file
 
 ```
@@ -190,6 +191,7 @@ Three buttons are already added including Drive Link, Index Link, and View Link,
 - `BUTTON_SIX_URL`:
 
 </details>
+
 ------
 
 ### Getting Google OAuth API credential file and token.pickle

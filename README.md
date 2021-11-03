@@ -331,7 +331,9 @@ Let us create only the Service Accounts that we need.
 
 #### 1) Create Service Accounts to Current Project (Recommended Method)
 - List your projects ids
-    python3 gen_sa_accounts.py --list-projects
+```
+python3 gen_sa_accounts.py --list-projects
+```
 - Enable services automatically by this command
 ```
 python3 gen_sa_accounts.py --enable-services $PROJECTID

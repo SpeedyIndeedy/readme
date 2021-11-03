@@ -323,9 +323,7 @@ Let us create only the Service Accounts that we need.
 
 >**NOTE**: If you have created SAs in past from this script, you can also just re download the keys by running:
 
-    ```
     python3 gen_sa_accounts.py --download-keys project_id
-    ```
 
 >**NOTE:** 1 Service Account can upload/copy around 750 GB a day, 1 project can make 100 Service Accounts so you can upload 75 TB a day or clone 2 TB from each file creator (uploader email).
 

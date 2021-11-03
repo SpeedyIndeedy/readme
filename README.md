@@ -333,60 +333,38 @@ Let us create only the Service Accounts that we need.
 - List your projects ids
     python3 gen_sa_accounts.py --list-projects
 - Enable services automatically by this command
-```
-python3 gen_sa_accounts.py --enable-services $PROJECTID
-```
+    python3 gen_sa_accounts.py --enable-services $PROJECTID
 - Create Sevice Accounts to current project
-```
-python3 gen_sa_accounts.py --create-sas $PROJECTID
-```
+    python3 gen_sa_accounts.py --create-sas $PROJECTID
 - Download Sevice Accounts as accounts folder
-```
-python3 gen_sa_accounts.py --download-keys $PROJECTID
-```
+    python3 gen_sa_accounts.py --download-keys $PROJECTID
 
 #### 2) Another Quick Method
-```
-python3 gen_sa_accounts.py --quick-setup 1 --new-only
-```
+    python3 gen_sa_accounts.py --quick-setup 1 --new-only
 A folder named accounts will be created which will contain keys for the Service Accounts.
 
 ### a) Add Service Accounts to Google Group
 - Mount accounts folder
-```
-cd accounts
-```
+    cd accounts
 - Grab emails form all accounts to emails.txt file that would be created in accounts folder
-```
-grep -oPh '"client_email": "\K[^"]+' *.json > emails.txt
-```
+    grep -oPh '"client_email": "\K[^"]+' *.json > emails.txt
 - Unmount acounts folder
-```
-cd -
-```
+    cd -
 Then add emails from emails.txt to Google Group, after that add this Google Group to your Shared Drive and promote it to manager.
 
 ### b) Add Service Accounts to the Team Drive
 - Run:
-```
-python3 add_to_team_drive.py -d SharedTeamDriveSrcID
-```
+    python3 add_to_team_drive.py -d SharedTeamDriveSrcID
 ------
 ## Multi Search IDs
 To use list from multi TD/folder. Run driveid.py in your terminal and follow it. It will generate **drive_folder** file or u can simply create `drive_folder` file in working directory and fill it, check below format:
-```
-MyTdName folderID/tdID IndexLink(if available)
-MyTdName2 folderID/tdID IndexLink(if available)
-```
+    MyTdName folderID/tdID IndexLink(if available)
+    MyTdName2 folderID/tdID IndexLink(if available)
 ---
 ## Youtube-dl and Index Authentication Using .netrc File
 For using your premium accounts in Youtube-dl or for protected Index Links, edit the netrc file according to following format:
-```
-machine host login username password my_youtube_password
-```
+    machine host login username password my_youtube_password
 For Index Link with only password without username, even http auth will not work, so this is the solution.
-```
-machine example.workers.dev password index_password
-```
+    machine example.workers.dev password index_password
 Where host is the name of extractor (eg. Youtube, Twitch). Multiple accounts of different hosts can be added each separated by a new line.
 

@@ -189,7 +189,7 @@ Three buttons are already added including Drive Link, Index Link, and View Link,
 - `BUTTON_SIX_URL`:
 
 </details>
-
+---
 ### Getting Google OAuth API credential file and token.pickle
 - Visit the [Google Cloud Console](https://console.developers.google.com/apis/credentials)
 - Go to the OAuth Consent tab, fill it, and save.
@@ -204,6 +204,7 @@ Three buttons are already added including Drive Link, Index Link, and View Link,
 pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib
 python3 generate_drive_token.py
 ```
+---
 ### Final steps for deploying on VPS
 
 **IMPORTANT NOTE**: You must set `SERVER_PORT` variable to `80` or any other port you want to use.
@@ -220,9 +221,9 @@ sudo docker build . -t mirror-bot
 ```
 sudo docker run -p 80:80 mirror-bot
 ```
-### OR
+#### OR
 
-### Using Docker-compose, you can edit and build your image in seconds:
+#### Using Docker-compose, you can edit and build your image in seconds:
 
 **NOTE**: If you want to use port other than 80, change it in [docker-compose.yml](https://github.com/anasty17/mirror-leech-telegram-bot/blob/master/docker-compose.yml)
 
@@ -264,7 +265,7 @@ sudo docker image prune -a
 ```
 - Tutorial video from Tortoolkit repo
 <p><a href="https://youtu.be/c8_TU1sPK08"> <img src="https://img.shields.io/badge/See%20Video-black?style=for-the-badge&logo=YouTube" width="160""/></a></p>    
-
+---
 # Extras
 
 ## Bot commands to be set in [@BotFather](https://t.me/BotFather)
@@ -302,11 +303,11 @@ stats - Bot Usage Stats
 ping - Ping the Bot
 help - All cmds with description
 ```
-
+---
 ## Using Service Accounts for uploading to avoid user rate limit
 For Service Account to work, you must set `USE_SERVICE_ACCOUNTS` = "True" in config file or environment variables.
 **NOTE**: Using Service Accounts is only recommended while uploading to a Team Drive.
-
+---
 ### Generate Service Accounts. [What is Service Account](https://cloud.google.com/iam/docs/service-accounts)
 Let us create only the Service Accounts that we need. 
 **Warning**: Abuse of this feature is not the aim of this project and we do **NOT** recommend that you make a lot of projects, just one project and 100 SAs allow you plenty of use, its also possible that over abuse might get your projects banned by Google.
@@ -364,14 +365,14 @@ Then add emails from emails.txt to Google Group, after that add this Google Grou
 ```
 python3 add_to_team_drive.py -d SharedTeamDriveSrcID
 ```
-
+---
 ## Multi Search IDs
 To use list from multi TD/folder. Run driveid.py in your terminal and follow it. It will generate **drive_folder** file or u can simply create `drive_folder` file in working directory and fill it, check below format:
 ```
 MyTdName folderID/tdID IndexLink(if available)
 MyTdName2 folderID/tdID IndexLink(if available)
 ```
-
+---
 ## Youtube-dl and Index Authentication Using .netrc File
 For using your premium accounts in Youtube-dl or for protected Index Links, edit the netrc file according to following format:
 ```

@@ -204,7 +204,7 @@ Three buttons are already added including Drive Link, Index Link, and View Link,
 pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib
 python3 generate_drive_token.py
 ```
-## Final steps for deploying on VPS
+### Final steps for deploying on VPS
 
 **IMPORTANT NOTE**: You must set `SERVER_PORT` variable to `80` or any other port you want to use.
 

@@ -322,7 +322,7 @@ Let us create only the Service Accounts that we need.
 **Warning**: Abuse of this feature is not the aim of this project and we do **NOT** recommend that you make a lot of projects, just one project and 100 SAs allow you plenty of use, its also possible that over abuse might get your projects banned by Google.
 
 >**NOTE**: If you have created SAs in past from this script, you can also just re download the keys by running:
-    
+
     ```
     python3 gen_sa_accounts.py --download-keys project_id
     ```
@@ -355,7 +355,7 @@ python3 gen_sa_accounts.py --quick-setup 1 --new-only
 ```
 A folder named accounts will be created which will contain keys for the Service Accounts.
 
-### Add Service Accounts to Google Group
+### a) Add Service Accounts to Google Group
 - Mount accounts folder
 ```
 cd accounts
@@ -370,7 +370,7 @@ cd -
 ```
 Then add emails from emails.txt to Google Group, after that add this Google Group to your Shared Drive and promote it to manager.
 
-### Add Service Accounts to the Team Drive
+### b) Add Service Accounts to the Team Drive
 - Run:
 ```
 python3 add_to_team_drive.py -d SharedTeamDriveSrcID

@@ -66,7 +66,7 @@ This is a Telegram Bot written in Python for mirroring files on the Internet to 
 
 ## Deploying on VPS
 
-### Installing requirements
+### 1) Installing requirements
 
 - Clone this repo:
 ```
@@ -114,7 +114,7 @@ pip3 install -r requirements-cli.txt
     
 ------
 
-### Setting up config file
+### 2) Setting up config file
 
 ```
 cp config_sample.env config.env
@@ -195,7 +195,7 @@ Three buttons are already added including Drive Link, Index Link, and View Link,
 
 ------
 
-### - Getting Google OAuth API credential file and token.pickle
+### 3) Getting Google OAuth API credential file and token.pickle
 - Visit the [Google Cloud Console](https://console.developers.google.com/apis/credentials)
 - Go to the OAuth Consent tab, fill it, and save.
 - Go to the Credentials tab and click Create Credentials -> OAuth Client ID
@@ -211,7 +211,7 @@ python3 generate_drive_token.py
 ```
 ------
 
-### - Final steps for deploying on VPS
+### 4) Final steps for deploying on VPS
 
 **IMPORTANT NOTE**: You must set `SERVER_PORT` variable to `80` or any other port you want to use.
 

@@ -124,6 +124,7 @@ cp config_sample.env config.env
 _____REMOVE_THIS_LINE_____=True
 ```
 Fill up rest of the fields. Meaning of each field is discussed below:
+
 **1. Required Fields**
 <details>
     <summary><b>Click Here For More Details</b></summary>

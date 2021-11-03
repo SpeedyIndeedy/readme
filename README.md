@@ -53,8 +53,20 @@ This is a Telegram Bot written in Python for mirroring files on the Internet to 
 <p><a href="https://telegra.ph/Magneto-Python-Aria---Custom-Filename-Examples-01-20"> <img src="https://img.shields.io/badge/See%20Telegraph-grey?style=for-the-badge&logo=telegraph" width="170""/></a></p>
 
 # How to deploy?
-Deploying is pretty much straight forward and is divided into several steps as follows:
-## Installing requirements
+
+## Deploying on Heroku
+- Deploying on Heroku with Github Workflow
+<p><a href="https://telegra.ph/Heroku-Deployment-10-04"> <img src="https://img.shields.io/badge/Deploy%20Guide-blueviolet?style=for-the-badge&logo=heroku" width="170""/></a></p>
+
+- Deploying on Heroku with helper script and Goorm IDE (works on VPS too)
+<p><a href="https://telegra.ph/Deploying-your-own-Mirrorbot-10-19"> <img src="https://img.shields.io/badge/Deploy%20Guide-grey?style=for-the-badge&logo=telegraph" width="170""/></a></p>
+
+- Deploying on Heroku with heroku-cli and Goorm IDE
+<p><a href="https://telegra.ph/How-to-Deploy-a-Mirror-Bot-to-Heroku-with-CLI-05-06"> <img src="https://img.shields.io/badge/Deploy%20Guide-grey?style=for-the-badge&logo=telegraph" width="170""/></a></p>
+
+## Deploying on VPS
+
+### Installing requirements
 
 - Clone this repo:
 ```
@@ -80,7 +92,7 @@ sudo pacman -S docker python
 ```
 pip3 install -r requirements-cli.txt
 ```
-## Generate Database
+### Generate Database (optional)
 <details>
     <summary><b>Click Here For More Details</b></summary>
 
@@ -99,7 +111,7 @@ pip3 install -r requirements-cli.txt
 
 </details>
 
-## Setting up config file
+### Setting up config file
 
 ```
 cp config_sample.env config.env
@@ -178,43 +190,7 @@ Three buttons are already added including Drive Link, Index Link, and View Link,
 
 </details>
 
-## Bot commands to be set in [@BotFather](https://t.me/BotFather)
-
-```
-mirror - Start mirroring
-zipmirror - Start mirroring and upload as .zip
-unzipmirror - Extract files
-qbmirror - Start mirroring using qBittorrent
-qbzipmirror - Start mirroring and upload as .zip using qb
-qbunzipmirror - Extract files using qBittorrent
-leech - Leech Torrent/Direct link
-zipleech - Leech Torrent/Direct link and upload as .zip
-unzipleech - Leech Torrent/Direct link and extract
-qbleech - Leech Torrent/Magnet using qBittorrent
-qbzipleech - Leech Torrent/Magnet and upload as .zip using qb
-qbunzipleech - Leech Torrent and extract using qb
-clone - Copy file/folder to Drive count - Count file/folder of Drive link
-watch - Mirror Youtube-dl supported link
-zipwatch - Mirror Youtube playlist link and upload as .zip
-leechwatch - Leech through Youtube-dl supported link
-leechzipwatch - Leech Youtube playlist link and upload as .zip
-leechset - Leech settings
-setthumb - Set Thumbnail
-status - Get Mirror Status message
-list - [query] Search files in Drive
-search - [site] [query] Search for torrents with API
-cancel - Cancel a task
-cancelall - Cancel all tasks
-del - [drive_url] Delete file from Drive
-log - Get the Bot Log [owner/sudo only]
-shell - Run commands in Shell [owner only]
-restart - Restart the Bot [owner/sudo only]
-stats - Bot Usage Stats
-ping - Ping the Bot
-help - All cmds with description
-```
-
-## Getting Google OAuth API credential file
+### Getting Google OAuth API credential file and token.pickle
 - Visit the [Google Cloud Console](https://console.developers.google.com/apis/credentials)
 - Go to the OAuth Consent tab, fill it, and save.
 - Go to the Credentials tab and click Create Credentials -> OAuth Client ID
@@ -228,7 +204,7 @@ help - All cmds with description
 pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib
 python3 generate_drive_token.py
 ```
-## Deploying On VPS
+## Final steps for deploying on VPS
 
 **IMPORTANT NOTE**: You must set `SERVER_PORT` variable to `80` or any other port you want to use.
 
@@ -287,23 +263,51 @@ sudo docker container prune
 sudo docker image prune -a
 ```
 - Tutorial video from Tortoolkit repo
-<p><a href="https://youtu.be/c8_TU1sPK08"> <img src="https://img.shields.io/badge/See%20Video-black?style=for-the-badge&logo=YouTube" width="160""/></a></p>
+<p><a href="https://youtu.be/c8_TU1sPK08"> <img src="https://img.shields.io/badge/See%20Video-black?style=for-the-badge&logo=YouTube" width="160""/></a></p>    
 
-## Deploying on Heroku
-- Deploying on Heroku with Github Workflow
-<p><a href="https://telegra.ph/Heroku-Deployment-10-04"> <img src="https://img.shields.io/badge/Deploy%20Guide-blueviolet?style=for-the-badge&logo=heroku" width="170""/></a></p>
+# Extras
 
-- Deploying on Heroku with helper script and Goorm IDE (works on VPS too)
-<p><a href="https://telegra.ph/Deploying-your-own-Mirrorbot-10-19"> <img src="https://img.shields.io/badge/Deploy%20Guide-grey?style=for-the-badge&logo=telegraph" width="170""/></a></p>
+## Bot commands to be set in [@BotFather](https://t.me/BotFather)
 
-- Deploying on Heroku with heroku-cli and Goorm IDE
-<p><a href="https://telegra.ph/How-to-Deploy-a-Mirror-Bot-to-Heroku-with-CLI-05-06"> <img src="https://img.shields.io/badge/Deploy%20Guide-grey?style=for-the-badge&logo=telegraph" width="170""/></a></p>
+```
+mirror - Start mirroring
+zipmirror - Start mirroring and upload as .zip
+unzipmirror - Extract files
+qbmirror - Start mirroring using qBittorrent
+qbzipmirror - Start mirroring and upload as .zip using qb
+qbunzipmirror - Extract files using qBittorrent
+leech - Leech Torrent/Direct link
+zipleech - Leech Torrent/Direct link and upload as .zip
+unzipleech - Leech Torrent/Direct link and extract
+qbleech - Leech Torrent/Magnet using qBittorrent
+qbzipleech - Leech Torrent/Magnet and upload as .zip using qb
+qbunzipleech - Leech Torrent and extract using qb
+clone - Copy file/folder to Drive count - Count file/folder of Drive link
+watch - Mirror Youtube-dl supported link
+zipwatch - Mirror Youtube playlist link and upload as .zip
+leechwatch - Leech through Youtube-dl supported link
+leechzipwatch - Leech Youtube playlist link and upload as .zip
+leechset - Leech settings
+setthumb - Set Thumbnail
+status - Get Mirror Status message
+list - [query] Search files in Drive
+search - [site] [query] Search for torrents with API
+cancel - Cancel a task
+cancelall - Cancel all tasks
+del - [drive_url] Delete file from Drive
+log - Get the Bot Log [owner/sudo only]
+shell - Run commands in Shell [owner only]
+restart - Restart the Bot [owner/sudo only]
+stats - Bot Usage Stats
+ping - Ping the Bot
+help - All cmds with description
+```
 
-# Using Service Accounts for uploading to avoid user rate limit
+## Using Service Accounts for uploading to avoid user rate limit
 For Service Account to work, you must set `USE_SERVICE_ACCOUNTS` = "True" in config file or environment variables.
 **NOTE**: Using Service Accounts is only recommended while uploading to a Team Drive.
 
-## Generate Service Accounts. [What is Service Account](https://cloud.google.com/iam/docs/service-accounts)
+### Generate Service Accounts. [What is Service Account](https://cloud.google.com/iam/docs/service-accounts)
 Let us create only the Service Accounts that we need. 
 **Warning**: Abuse of this feature is not the aim of this project and we do **NOT** recommend that you make a lot of projects, just one project and 100 SAs allow you plenty of use, its also possible that over abuse might get your projects banned by Google.
 
@@ -316,7 +320,7 @@ python3 gen_sa_accounts.py --download-keys project_id
 
 **NOTE:** Add Service Accounts to team drive or google group no need to add them in both.
 
-### Create Service Accounts to Current Project (Recommended Method)
+#### Create Service Accounts to Current Project (Recommended Method)
 - List your projects ids
 ```
 python3 gen_sa_accounts.py --list-projects
@@ -334,13 +338,13 @@ python3 gen_sa_accounts.py --create-sas $PROJECTID
 python3 gen_sa_accounts.py --download-keys $PROJECTID
 ```
 
-### Another Quick Method
+#### Another Quick Method
 ```
 python3 gen_sa_accounts.py --quick-setup 1 --new-only
 ```
 A folder named accounts will be created which will contain keys for the Service Accounts.
 
-#### Add Service Accounts to Google Group
+##### Add Service Accounts to Google Group
 - Mount accounts folder
 ```
 cd accounts
@@ -355,20 +359,20 @@ cd -
 ```
 Then add emails from emails.txt to Google Group, after that add this Google Group to your Shared Drive and promote it to manager.
 
-#### Add Service Accounts to the Team Drive
+##### Add Service Accounts to the Team Drive
 - Run:
 ```
 python3 add_to_team_drive.py -d SharedTeamDriveSrcID
 ```
 
-# Multi Search IDs
+## Multi Search IDs
 To use list from multi TD/folder. Run driveid.py in your terminal and follow it. It will generate **drive_folder** file or u can simply create `drive_folder` file in working directory and fill it, check below format:
 ```
 MyTdName folderID/tdID IndexLink(if available)
 MyTdName2 folderID/tdID IndexLink(if available)
 ```
 
-# Youtube-dl and Index Authentication Using .netrc File
+## Youtube-dl and Index Authentication Using .netrc File
 For using your premium accounts in Youtube-dl or for protected Index Links, edit the netrc file according to following format:
 ```
 machine host login username password my_youtube_password

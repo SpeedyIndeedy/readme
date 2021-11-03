@@ -113,6 +113,7 @@ Fill up rest of the fields. Meaning of each field is discussed below:
 
 <details>
     <summary><b>Click Here For More Details</b></summary>
+
 - `BOT_TOKEN`: The Telegram Bot Token that you got from [@BotFather](https://t.me/BotFather)
 - `TELEGRAM_API`: This is to authenticate your Telegram account for downloading Telegram files. You can get this from https://my.telegram.org. **NOTE**: DO NOT put this in quotes.
 - `TELEGRAM_HASH`: This is to authenticate your Telegram account for downloading Telegram files. You can get this from https://my.telegram.org
@@ -128,6 +129,7 @@ Fill up rest of the fields. Meaning of each field is discussed below:
 
 <details>
     <summary><b>Click Here For More Details</b></summary>
+
 - `ACCOUNTS_ZIP_URL`: Only if you want to load your Service Account externally from an Index Link. Archive the accounts folder to a zip file. Fill this with the direct link of that file.
 - `TOKEN_PICKLE_URL`: Only if you want to load your **token.pickle** externally from an Index Link. Fill this with the direct link of that file.
 - `MULTI_SEARCH_URL`: Check `drive_folder` setup [here](https://github.com/anasty17/mirror-leech-telegram-bot/tree/master#multi-search-ids). Upload **drive_folder** file [here](https://gist.github.com/). Open the raw file of that gist, it's URL will be your required variable.
@@ -179,6 +181,7 @@ Three buttons are already added including Drive Link, Index Link, and View Link,
 - `BUTTON_FIVE_URL`:
 - `BUTTON_SIX_NAME`:
 - `BUTTON_SIX_URL`:
+
 </details>
 
 ## Bot commands to be set in [@BotFather](https://t.me/BotFather)

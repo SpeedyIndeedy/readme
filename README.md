@@ -109,7 +109,7 @@ cp config_sample.env config.env
 _____REMOVE_THIS_LINE_____=True
 ```
 Fill up rest of the fields. Meaning of each field is discussed below:
-1. **Required Field**
+1. **Required Fields**
 <details>
     <summary><b>Click Here For More Details</b></summary>
 
@@ -124,10 +124,11 @@ Fill up rest of the fields. Meaning of each field is discussed below:
 - `BASE_URL_OF_BOT`: (Required for Heroku to avoid sleep/idling) Valid BASE URL of app where the bot is deployed. Format of URL should be `http://myip` (where `myip` is the IP/Domain of your bot) or if you have chosen other port than `80` then fill in this format `http://myip:port`, for Heroku fill `https://yourappname.herokuapp.com` (**NOTE**: Do not put slash at the end), still got idling? You can use http://cron-job.org to ping your Heroku app.
 </details>
 
-2. **Optional Field**
+2. **Optional Fields**
 
 <details>
     <summary><b>Click Here For More Details</b></summary>
+
 - `ACCOUNTS_ZIP_URL`: Only if you want to load your Service Account externally from an Index Link. Archive the accounts folder to a zip file. Fill this with the direct link of that file.
 - `TOKEN_PICKLE_URL`: Only if you want to load your **token.pickle** externally from an Index Link. Fill this with the direct link of that file.
 - `MULTI_SEARCH_URL`: Check `drive_folder` setup [here](https://github.com/anasty17/mirror-leech-telegram-bot/tree/master#multi-search-ids). Upload **drive_folder** file [here](https://gist.github.com/). Open the raw file of that gist, it's URL will be your required variable.
@@ -161,15 +162,10 @@ Fill up rest of the fields. Meaning of each field is discussed below:
 - `SHORTENER_API`: Fill your Shortener API key.
 - `SHORTENER`: Shortener URL.
 Supported URL Shorteners:
-```
-exe.io, gplinks.in, shrinkme.io, urlshortx.com, shortzon.com, bit.ly,
-shorte.st, linkvertise.com , ouo.io
-```
+>exe.io, gplinks.in, shrinkme.io, urlshortx.com, shortzon.com, bit.ly, shorte.st, linkvertise.com , ouo.io
 - `DEFAULT_SEARCH`: Choose which default search site (still you can choose site or all while bot running), empty means `all`.
 Supported Sites:
-```
-rarbg, 1337x, yts, etzv, tgx, torlock, piratebay, nyaasi, ettv
-```
+>rarbg, 1337x, yts, etzv, tgx, torlock, piratebay, nyaasi, ettv
 
 ### Add more buttons (Optional Field)
 Three buttons are already added including Drive Link, Index Link, and View Link, you can add extra buttons, if you don't know what are the below entries, simply leave them empty.

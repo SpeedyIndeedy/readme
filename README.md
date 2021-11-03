@@ -321,14 +321,14 @@ help - All cmds with description
 Let us create only the Service Accounts that we need. 
 **Warning**: Abuse of this feature is not the aim of this project and we do **NOT** recommend that you make a lot of projects, just one project and 100 SAs allow you plenty of use, its also possible that over abuse might get your projects banned by Google.
 
-**NOTE**: If you have created SAs in past from this script, you can also just re download the keys by running:
-```
-python3 gen_sa_accounts.py --download-keys project_id
-```
+>**NOTE**: If you have created SAs in past from this script, you can also just re download the keys by running:
+    ```
+    python3 gen_sa_accounts.py --download-keys project_id
+    ```
 
-**NOTE:** 1 Service Account can upload/copy around 750 GB a day, 1 project can make 100 Service Accounts so you can upload 75 TB a day or clone 2 TB from each file creator (uploader email).
+>**NOTE:** 1 Service Account can upload/copy around 750 GB a day, 1 project can make 100 Service Accounts so you can upload 75 TB a day or clone 2 TB from each file creator (uploader email).
 
-**NOTE:** Add Service Accounts to team drive or google group no need to add them in both.
+>**NOTE:** Add Service Accounts to team drive or google group no need to add them in both.
 
 #### 1) Create Service Accounts to Current Project (Recommended Method)
 - List your projects ids

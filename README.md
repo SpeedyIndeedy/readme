@@ -111,9 +111,9 @@ pip3 install -r requirements-cli.txt
 <p><a href="https://dev.to/prisma/how-to-setup-a-free-postgresql-database-on-heroku-1dc1"> <img src="https://img.shields.io/badge/See%20Dev.to-black?style=for-the-badge&logo=dev.to" width="160""/></a></p>
 
 </details>
-
-### Setting up config file
 ------
+### Setting up config file
+
 ```
 cp config_sample.env config.env
 ```
@@ -191,6 +191,7 @@ Three buttons are already added including Drive Link, Index Link, and View Link,
 
 </details>
 ------
+
 ### Getting Google OAuth API credential file and token.pickle
 - Visit the [Google Cloud Console](https://console.developers.google.com/apis/credentials)
 - Go to the OAuth Consent tab, fill it, and save.
@@ -206,6 +207,7 @@ pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib
 python3 generate_drive_token.py
 ```
 ------
+
 ### Final steps for deploying on VPS
 
 **IMPORTANT NOTE**: You must set `SERVER_PORT` variable to `80` or any other port you want to use.
@@ -267,6 +269,7 @@ sudo docker image prune -a
 - Tutorial video from Tortoolkit repo
 <p><a href="https://youtu.be/c8_TU1sPK08"> <img src="https://img.shields.io/badge/See%20Video-black?style=for-the-badge&logo=YouTube" width="160""/></a></p>    
 ------
+
 # Extras
 
 ## Bot commands to be set in [@BotFather](https://t.me/BotFather)

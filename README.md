@@ -124,7 +124,7 @@ cp config_sample.env config.env
 _____REMOVE_THIS_LINE_____=True
 ```
 Fill up rest of the fields. Meaning of each field is discussed below:
-1. **Required Fields**
+**1. Required Fields**
 <details>
     <summary><b>Click Here For More Details</b></summary>
 
@@ -139,7 +139,7 @@ Fill up rest of the fields. Meaning of each field is discussed below:
 - `BASE_URL_OF_BOT`: (Required for Heroku to avoid sleep/idling) Valid BASE URL of app where the bot is deployed. Format of URL should be `http://myip` (where `myip` is the IP/Domain of your bot) or if you have chosen other port than `80` then fill in this format `http://myip:port`, for Heroku fill `https://yourappname.herokuapp.com` (**NOTE**: Do not put slash at the end), still got idling? You can use http://cron-job.org to ping your Heroku app.
 </details>
 
-2. **Optional Fields**
+**2. Optional Fields**
 
 <details>
     <summary><b>Click Here For More Details</b></summary>
@@ -195,7 +195,7 @@ Three buttons are already added including Drive Link, Index Link, and View Link,
 
 ------
 
-### Getting Google OAuth API credential file and token.pickle
+### - Getting Google OAuth API credential file and token.pickle
 - Visit the [Google Cloud Console](https://console.developers.google.com/apis/credentials)
 - Go to the OAuth Consent tab, fill it, and save.
 - Go to the Credentials tab and click Create Credentials -> OAuth Client ID
@@ -211,7 +211,7 @@ python3 generate_drive_token.py
 ```
 ------
 
-### Final steps for deploying on VPS
+### - Final steps for deploying on VPS
 
 **IMPORTANT NOTE**: You must set `SERVER_PORT` variable to `80` or any other port you want to use.
 
@@ -270,7 +270,8 @@ sudo docker container prune
 sudo docker image prune -a
 ```
 - Tutorial video from Tortoolkit repo
-<p><a href="https://youtu.be/c8_TU1sPK08"> <img src="https://img.shields.io/badge/See%20Video-black?style=for-the-badge&logo=YouTube" width="160""/></a></p>    
+<p><a href="https://youtu.be/c8_TU1sPK08"> <img src="https://img.shields.io/badge/See%20Video-black?style=for-the-badge&logo=YouTube" width="160""/></a></p>
+    
 ------
 
 # Extras

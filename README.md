@@ -314,10 +314,10 @@ help - All cmds with description
 ```
 ------
 ## Using Service Accounts for uploading to avoid user rate limit
-For Service Account to work, you must set `USE_SERVICE_ACCOUNTS` = "True" in config file or environment variables.
-**NOTE**: Using Service Accounts is only recommended while uploading to a Team Drive.
-------
-### Generate Service Accounts. [What is Service Account](https://cloud.google.com/iam/docs/service-accounts)
+>For Service Account to work, you must set `USE_SERVICE_ACCOUNTS` = "True" in config file or environment variables.
+>**NOTE**: Using Service Accounts is only recommended while uploading to a Team Drive.
+
+### Generate Service Accounts. [What is Service Account?](https://cloud.google.com/iam/docs/service-accounts)
 Let us create only the Service Accounts that we need. 
 **Warning**: Abuse of this feature is not the aim of this project and we do **NOT** recommend that you make a lot of projects, just one project and 100 SAs allow you plenty of use, its also possible that over abuse might get your projects banned by Google.
 
@@ -330,7 +330,7 @@ python3 gen_sa_accounts.py --download-keys project_id
 
 **NOTE:** Add Service Accounts to team drive or google group no need to add them in both.
 
-#### Create Service Accounts to Current Project (Recommended Method)
+#### 1) Create Service Accounts to Current Project (Recommended Method)
 - List your projects ids
 ```
 python3 gen_sa_accounts.py --list-projects
@@ -348,7 +348,7 @@ python3 gen_sa_accounts.py --create-sas $PROJECTID
 python3 gen_sa_accounts.py --download-keys $PROJECTID
 ```
 
-#### Another Quick Method
+#### 2) Another Quick Method
 ```
 python3 gen_sa_accounts.py --quick-setup 1 --new-only
 ```
